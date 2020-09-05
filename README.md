@@ -1,1 +1,1 @@
-Beginner projects from 'Modern Javascript from the Begnning by Brad Traversy'
+Beginner projects from 'Modern Javascript from the Begnning -Brad Traversy'
