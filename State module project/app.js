@@ -1,20 +1,20 @@
 const PageState = function () {
-	let currentState = new homeState(this);
+    let currentState = new homeState(this);
 
-	this.init = function () {
-		this.change(new homeState());
-	};
+    this.init = function () {
+        this.change(new homeState());
+    };
 
-	this.change = function (state) {
-		currentState = state;
-	};
+    this.change = function (state) {
+        currentState = state;
+    };
 };
 
 // Home State
 const homeState = function (page) {
-	document.querySelector("#heading").textContent = null;
+    document.querySelector("#heading").textContent = null;
 
-	document.querySelector("#content").innerHTML = `
+    document.querySelector("#content").innerHTML = `
     <div class="jumbotron">
         <h1 class="display-3">Hello, world!</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -29,18 +29,18 @@ const homeState = function (page) {
 
 // About State
 const aboutState = function (page) {
-	document.querySelector("#heading").textContent = "About Us";
+    document.querySelector("#heading").textContent = "About Us";
 
-	document.querySelector("#content").innerHTML = `
+    document.querySelector("#content").innerHTML = `
         <p>About Page</p>
     `;
 };
 
 // Contact State
 const contactState = function (page) {
-	document.querySelector("#heading").textContent = "Contact Us";
+    document.querySelector("#heading").textContent = "Contact Us";
 
-	document.querySelector("#content").innerHTML = `
+    document.querySelector("#content").innerHTML = `
     <form>
         <div class="form-group">
             <label>Name</label>
@@ -68,18 +68,18 @@ const contact = document.getElementById("contact");
 
 // Home
 home.addEventListener("click", (e) => {
-	page.change(new homeState());
-	e.preventDefault();
+    page.change(new homeState());
+    e.preventDefault();
 });
 
 // About
 about.addEventListener("click", (e) => {
-	page.change(new aboutState());
-	e.preventDefault();
+    page.change(new aboutState());
+    e.preventDefault();
 });
 
 // Contact
 contact.addEventListener("click", (e) => {
-	page.change(new contactState());
-	e.preventDefault();
+    page.change(new contactState());
+    e.preventDefault();
 });
